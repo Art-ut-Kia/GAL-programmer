@@ -1,0 +1,23 @@
+La programmation (bien respecter l'ordre des étapes)
+- le SUB-D25 du programmateur doit au départ être déconnecté du PC
+- Insérer le GAL dans le support DIL 24 broches du programmateur
+- Connecter GND/VCC à une première alimentation fixe délivrant +5V
+- Connecter GND/EDIT à une alimentation variable, réglée à +12V
+- Connecter la masse électrique commune aux 2 alimentations et au programmateur (GND) à celle du PC
+- Lancer le programme GALBlast et :
+	* Sélectionner le port LPT à utiliser (LPT1, LPT2, ...)
+	* Charger le fichier JEDEC, le type de GAL est automatiquement sélectionné
+- Connecter le SUB-D25 au port LPT sélectionné du PC
+- sur GALBlast :
+	* activer la commande 'Ecrire GAL'
+	  -> la PES du GAL est lue et la tension de programmation requise s'affiche.
+- Régler l'alimentation variable à la tension de programmation requise ci-dessus.
+  Attention à éviter tout dépassement de tension.
+  En cas de doute, débrancher le SUB-D25 pendant le réglage.
+- Sur GALBlast poursuivre la procédure 'Ecrire GAL'.
+- Quand la procédure est terminée : déconnecter la fiche SUB-D25 du port imprimante du PC
+- Éteindre l'alimentation variable (tension de programmation)
+- Éteindre l'alimentation fixe (celle délivrant la tension VCC de 5V)
+- retirer la GAL du support DIL 24 broches
+
+-- C'est tout --
